@@ -1,38 +1,46 @@
-// Variables
-let nombre = "";
-let email = "";
-let mensaje = "";
+// Objeto para almacenar la información del usuario
+let usuario = {
+  nombre: '',
+  email: '',
+  mensaje: ''
+};
 
-// Nombre del usuario
-nombre = prompt("Por favor, ingrese su nombre:");
-
-if (nombre === null) {
-  alert("Has cancelado el proceso.");
-} else {
-  while (!nombre) {
-    nombre = prompt("El nombre es obligatorio. Ingrese su nombre:");
-  }
-
-// Email del usuario
-email = prompt("Por favor, ingrese su dirección de correo electrónico:");
-
-if (email === null) {
+// Función para solicitar información al usuario
+function solicitarInformacion(dato, mensaje) {
+  let input = prompt(mensaje);
+  if (input === null) {
     alert("Has cancelado el proceso.");
-} else {
-  while (!email) {
-    email = prompt("La dirección de correo electrónico es obligatoria. Ingrese su email:");
+    return null;
   }
-
-// Mensaje del usuario
-mensaje = prompt("Por favor, ingrese su mensaje:");
-if (mensaje === null) {
-    alert("Has cancelado el proceso.");
-} else {
-  while (!mensaje) {
-    mensaje = prompt("El mensaje es obligatorio. Ingrese su mensaje:");
+  while (!input) {
+    input = prompt(dato + " es obligatorio. Ingrese su " + dato.toLowerCase() + ":");
+    if (input === null) {
+      alert("Has cancelado el proceso.");
+      return null;
+    }
   }
-
-// Mensaje de confirmación con la información proporcionada por el usuario
-  alert("¡Gracias por completar el formulario! Nombre: " + nombre + ", Email: " + email + ", Mensaje: " + mensaje);
+  return input;
 }
-}}
+
+// Función para confirmar la información proporcionada por el usuario
+function confirmarInformacion(usuario) {
+  alert("¡Gracias por completar el formulario! Nombre: " + usuario.nombre + ", Email: " + usuario.email + ", Mensaje: " + usuario.mensaje);
+}
+
+// Función principal para solicitar la información
+function solicitarDatosUsuario() {
+  usuario.nombre = solicitarInformacion("Nombre", "Por favor, ingrese su nombre:");
+  if (usuario.nombre !== null) {
+    usuario.email = solicitarInformacion("Email", "Por favor, ingrese su dirección de correo electrónico:");
+    if (usuario.email !== null) {
+      usuario.mensaje = solicitarInformacion("Mensaje", "Por favor, ingrese su mensaje:");
+      if (usuario.mensaje !== null) {
+        confirmarInformacion(usuario);
+      }
+    }
+  }
+}
+
+// Llamada a la función principal
+solicitarDatosUsuario();
+
