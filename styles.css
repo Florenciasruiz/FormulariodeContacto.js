@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* Fuentes personalizadas */
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600;700&family=League+Script&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600;700&family=League+Script&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600&display=swap);
+.cuerpo {
+  background-color: hsl(330, 100%, 96%);
+  overflow: auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(255,219,237);
+  background: linear-gradient(90deg, rgba(255,219,237,1) 0%, rgba(255,219,237,1) 35%, rgba(255,255,255,1) 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: None;
+  width: 100%;
+  max-width: 1200px; 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: start;
+
+}
+
+.container {
+  width: 300%;
+  max-width: 600px;
+  margin-left: 0;
+  margin-right: 750px;
+  padding: 20px;
+  box-sizing: content-box;
+}
+
+
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+input,
+textarea {
+  width: 300%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#userData {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+#userData h2 {
+  margin-bottom: 15px;
+}
+
+#userData p {
+  margin-bottom: 10px;
+}
